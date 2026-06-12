@@ -6,8 +6,12 @@ from langchain_core.prompts import ChatPromptTemplate
 
 load_dotenv()
 
+api_key = os.getenv("GROQ_API_KEY")
+
+st.write("API Key Loaded:", bool(api_key))
+
 llm = ChatGroq(
-    api_key=os.getenv("GROQ_API_KEY"),
+    api_key=api_key,
     model="llama-3.3-70b-versatile",
     temperature=0.3
 )
