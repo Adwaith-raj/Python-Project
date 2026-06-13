@@ -8,7 +8,6 @@ load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
 
-st.write("API Key Loaded:", bool(api_key))
 
 llm = ChatGroq(
     api_key=api_key,
